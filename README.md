@@ -1,6 +1,8 @@
 # SToast
 Android custom toast with 6 different types and light/dark theme support.
 
+![stoast](https://te.legra.ph/file/c18d3efce8d9af3a6798e.jpg)
+
 ![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)  ![version-v2.0](https://img.shields.io/badge/version-v2-blue)
 
 # A. Default SToast
