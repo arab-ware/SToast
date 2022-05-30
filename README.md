@@ -39,9 +39,14 @@ To customize **SToast** you can use methods explained below in **B** section
   - *Two duration parameters can be used to set the duration* `SToast.LENGTH_SHORT` `SToast.LENGTH_LONG`
 
 4. Now use `setText()` method to set text to the **SToast**.
+    ```java
+    toast.setText("some text");
+    ```
 #
 5. And `show()` method to show the **SToast**.
-
+    ```java
+    toast.show();
+    ```
 #
 An example of customized **SToast**
 ```java
