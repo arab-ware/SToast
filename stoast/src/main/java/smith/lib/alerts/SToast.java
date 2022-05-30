@@ -17,13 +17,16 @@ import java.util.TimerTask;
 
 public class SToast {
 
-	public static final String DARK = "#2E3338", LIGHT = "#FFFFFF", FOLLOW_SYSTEM = "SYSTEM";
-	public static final int TYPE_OK = 0, TYPE_WARN = 1, TYPE_DONE = 2, TYPE_ERROR = 3, TYPE_DEFAULT = 4, TYPE_HEART = 5,
+	// themes
+        public static final String DARK = "#2E3338", LIGHT = "#FFFFFF", FOLLOW_SYSTEM = "SYSTEM";
+	// types
+        public static final int TYPE_OK = 0, TYPE_WARN = 1, TYPE_DONE = 2, TYPE_ERROR = 3, TYPE_DEFAULT = 4, TYPE_HEART = 5,
 			TYPE_CONFUSE = 6;
 	private static Toast toast;
 	private static String theme, text;
 	private static int type, gravity, length;
 	private static Context context;
+        // duration
 	public static final int LENGTH_LONG = Toast.LENGTH_LONG, LENGTH_SHORT = Toast.LENGTH_SHORT;
 
 	public void setThemeAndType(String style, int typ) {
@@ -151,4 +154,19 @@ public class SToast {
 	public SToast(Context ctx) {
 		context = ctx;
 	}
+
+        /*
+	*
+	*
+	*    THIS LIBRARY CREATED BY HUSSEIN SHAKIR (SMITH)
+	*
+	*       TELEGRAM : @SMITHDEV
+	*	YOUTUBE : HUSSEIN SMITH
+	*
+	*	YOU GUYS ARE NOT ALLOWED TO MODIFY THIS LIBRARY,
+	*	WITHOT ANY PERMISSION FROM ME PERSONALLY..
+	*	ALL RIGHTS RESERVED © HUSSEIN SHAKIR, 2022.
+	*
+	*
+	*/
 }
