@@ -23,8 +23,10 @@ public class SToast {
         public static final int TYPE_OK = 0, TYPE_WARN = 1, TYPE_DONE = 2, TYPE_ERROR = 3, TYPE_DEFAULT = 4, TYPE_HEART = 5,
 			TYPE_CONFUSE = 6;
 	private static Toast toast;
-	private static String theme, text;
-	private static int type, gravity, length;
+	private static String theme = DARK, text;
+	private static int type = TYPE_DEFAULT;
+        private static int gravity = Gravity.BOTTOM;
+        private static int length = Toast.LENGTH_SHORT;
 	private static Context context;
         // duration
 	public static final int LENGTH_LONG = Toast.LENGTH_LONG, LENGTH_SHORT = Toast.LENGTH_SHORT;
