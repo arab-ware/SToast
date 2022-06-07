@@ -17,35 +17,16 @@ import java.util.TimerTask;
 
 public class SToast {
 
-	// themes
-        public static final String DARK = "#2E3338", LIGHT = "#FFFFFF", FOLLOW_SYSTEM = "SYSTEM";
-	// types
-        public static final int TYPE_OK = 0, TYPE_WARN = 1, TYPE_DONE = 2, TYPE_ERROR = 3, TYPE_DEFAULT = 4, TYPE_HEART = 5,
+	public static final String DARK = "#2E3338", LIGHT = "#FFFFFF", FOLLOW_SYSTEM = "SYSTEM";
+	public static final int TYPE_OK = 0, TYPE_WARN = 1, TYPE_DONE = 2, TYPE_ERROR = 3, TYPE_DEFAULT = 4, TYPE_HEART = 5,
 			TYPE_CONFUSE = 6;
 	private static Toast toast;
 	private static String theme = DARK, text;
-	private static int type = TYPE_DEFAULT;
-        private static int gravity = Gravity.BOTTOM;
-        private static int length = Toast.LENGTH_SHORT;
+	private static int type = TYPE_DEFAULT, gravity = Gravity.BOTTOM, length = Toast.LENGTH_SHORT;
 	private static Context context;
-        // duration
 	public static final int LENGTH_LONG = Toast.LENGTH_LONG, LENGTH_SHORT = Toast.LENGTH_SHORT;
 
-	public void setThemeAndType(String style, int typ) {
-		theme = style;
-		type = typ;
-	}
-
-	public void setText(String txt) {
-		text = txt;
-	}
-
-	public void setGravityAndDuration(int gvt, int dur) {
-		gravity = gvt;
-		length = dur;
-	}
-
-	public void show() {
+	private void show() {
 		toast = new Toast(context);
 		View inflate = ((Activity) context).getLayoutInflater().inflate(R.layout.toast, null);
 
@@ -136,6 +117,43 @@ public class SToast {
 
 		toast.show();
 	}
+	
+	public static class Create {
+		public Create(Context ctx) {
+			context = ctx;
+		}
+		
+		public Create setTheme(String style) {
+			theme = style;
+			return this;
+		}
+		
+		public Create setType(int typ) {
+			type = typ;
+			return this;
+		}
+		
+		public Create setText(String txt) {
+			text = txt;
+			return this;
+		}
+		
+		public Create setGravity(int gvt) {
+			gravity = gvt;
+			return this;
+		}
+		
+		public Create setDuration(int dur) {
+			length = dur;
+			return this;
+		}
+		
+		public SToast show() {
+			SToast toast = new SToast();
+			toast.show();
+			return toast;
+		}
+	}
 
 	private static boolean isNightModeEnabeld(Context context) {
 		int nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
@@ -152,17 +170,13 @@ public class SToast {
 		gradientDrawable.setCornerRadius((float) i);
 		view.setBackground(gradientDrawable);
 	}
-
-	public SToast(Context ctx) {
-		context = ctx;
-	}
-
-        /*
+	
+	/*
 	*
 	*
 	*    THIS LIBRARY CREATED BY HUSSEIN SHAKIR (SMITH)
 	*
-	*       TELEGRAM : @SMITHDEV
+	*	TELEGRAM : @SMITHDEV
 	*	YOUTUBE : HUSSEIN SMITH
 	*
 	*	YOU GUYS ARE NOT ALLOWED TO MODIFY THIS LIBRARY,
