@@ -3,7 +3,7 @@ Android custom toast with 6 different types and light/dark theme support.
 
 ![stoast](https://te.legra.ph/file/c18d3efce8d9af3a6798e.jpg)
 
-![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)  ![version-v2.0](https://img.shields.io/badge/version-v2-blue) ![Telegram-smithdev](https://img.shields.io/badge/Telegram-smithdev-blue)
+![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)  ![version-v2.0](https://img.shields.io/badge/version-v2-blue) [![Telegram-@SmithDev](https://img.shields.io/badge/Telegram-smithdev-blue)](https://smithdev.t.me/)
 
 # A. Default SToast
 (dark theme, default type, short length and bottom gravity)
