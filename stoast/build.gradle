@@ -26,6 +26,5 @@ android {
 }
 
 dependencies {
-	// CodeAssist does NOT support adding dependencies here,
-	// try using the library manager instead
+    
 }
